@@ -17,14 +17,14 @@ export default function PizzaBlock({title, price, imageUrl, sizes, types}) {
                     {
                         types.map((type) => {
                             return (
-                                <li onClick = {() => { setActiveType(type) }} className={activeType === type ? 'active' : ''}>{pizzaTypes[type]}</li>
+                                <li key={type} onClick = {() => { setActiveType(type) }} className={activeType === type ? 'active' : ''}>{pizzaTypes[type]}</li>
                             )
                         })
                     }
                 </ul>
                 <ul>
                     {
-                        sizes.map((size, index) => <li onClick = {() => { setActiveSize(index) }} className={activeSize === index ? 'active' : ''}>{size} см.</li>)
+                        sizes.map((size, index) => <li key={size} onClick = {() => { setActiveSize(index) }} className={activeSize === index ? 'active' : ''}>{size} см.</li>)
                         
                     }
                 </ul>
