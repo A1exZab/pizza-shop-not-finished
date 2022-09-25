@@ -33,7 +33,7 @@ export default function Sort() {
 					{
 						list.map((listItem, index) => { 
 							return(
-								<li onClick={() => onClickListItem(index)} className={selected === index ? 'active' : ''}>{listItem}</li>
+								<li key={index} onClick={() => onClickListItem(index)} className={selected === index ? 'active' : ''}>{listItem}</li>
 							)
 						 })
 					}
